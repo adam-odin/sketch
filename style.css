@@ -7,8 +7,6 @@
     --heroc: #129bf2;
     --herod: #f77d7a;
     --heroi: #1F2937;
-
-    
 }
 
 * {
@@ -22,12 +20,9 @@ html {
 }
 
 body {
-    padding: 20px 40px;
-    /* display:flex;
-    align-content: center;
-    align-items: stretch;
-    justify-content: center; */
     background-color: var(--heros);
+    width: 90vw;
+    margin: 10px;
 }
 
 .header {
@@ -47,52 +42,28 @@ button {
 
 h1 {
     text-align: center;
-    /* align-self: center; */
-    /* padding: 0 0 0 auto; */
-    /* margin: 0 0 0 auto; */
 } 
 
 p {
     background-color: var(--heros);
-    height: 10px;
+    min-height: 10px;
 }
-
-div {
-    /* background-color: var(--heros); */
-}
-
-/* .shell {
-    display: flex;
-    /* align-items: center;
-    justify-content: center;
-}*/
 
 .container {
-    display: flex;
-    background-color: var(--heros);
-    /* align-items: center; */
-    /* justify-content: center; */
-    width: 100vw;
-    height: 100vw;
-    /*margin: 0 5vw; */
-    padding: 0 auto auto 0; 
-    /* border: 2px solid var(--herog); */
-    /* width: auto;
-    height: auto; */
+    display: block;
+    gap: 0; 
+    height: same-as-width;
 }
 
 .row {
-    
+    flex: 1;
+    display: flex;
 }
 
 .square {
-    flex 1;
-    width: 5vw;
-    height: 5vw;
-    min-width: 1px;
-    min-height:1px;
+    flex: 1;
     background-color: var(--hero);
-    border: none;
+    height: 10px;
 }
 
 .row1 {
