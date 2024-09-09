@@ -5,6 +5,8 @@ const squares = document.querySelector(".square");
 let row;
 let square;
 
+const gridButton = document.querySelector("#gridButton");
+
 const numberRows = 16;
 const numberColumns = 16;
 
@@ -17,17 +19,21 @@ for (let i = 0; i < numberRows; i++) {
         console.log("Column number (j):" + j);
         square = document.createElement("div");
         square.classList.add("square");
+        square.id= "row" + i + "_col"+j;
         row.appendChild(square);
 
-        square.addEventListener("mouseenter", () => {
+        square.addEventListener("mouseenter", function(e) {
             console.log("mouseenter");
-            square.setAttribute("style","background: var(--herod");  
+            console.log(e.target);
+            e.target.style.background="var(--herod)";
         });
-        
-        square.addEventListener("mouseleave", () => {
+
+        square.addEventListener("mouseleave", function(e) {
             console.log("mouseleave");
-            square.setAttribute("style","background: var(--heros");
+            console.log(e.target);
+            e.target.style.background="var(--herot)";
         });
+
     } 
 }
 

@@ -2,11 +2,18 @@
         testPara.textContent = "AH";
         square.appendChild(testPara);
 
-// btn7.addEventListener("click", function (e) {
-//     console.log(e);
-//     console.log(e.target);
-//     e.target.style.background = "blue";
-//   });
+
+        square.addEventListener("mouseenter", () => {
+            console.log("mouseenter");
+            square.setAttribute("style","background: var(--herod");  
+        });
+
+        square.addEventListener("mouseleave", () => {
+            console.log("mouseleave");
+            square.setAttribute("style","background: var(--heros");
+        });
+
+
 
 ---
 html
