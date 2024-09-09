@@ -54,6 +54,7 @@ p {
     display: block;
     gap: 0; 
     background-color: var(--hero);
+    border: 2px solid var(--heroi);
 }
 
 .row {
@@ -66,7 +67,7 @@ p {
     background-color: var(--hero);
 }
 
-.row1 {
+/* .row1 {
     border-top: 5px solid var(--herog);
 }
 
@@ -80,4 +81,4 @@ p {
 
 .colLast {
     border-right: 5px solid var(--herog);
-}
+} */
