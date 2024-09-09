@@ -1,13 +1,15 @@
 const container = document.querySelector(".container");
-const maxSize = 960;
+const maxSize = 200;
 let row;
 let square;
 
-let numberRows=100;
+let numberRows=50;
 let numberColumns;
 let num=2;
 let proportion;
 let thisSquare;
+let thisOpacity;
+
 
 const buttonSet = document.querySelector(".setGrid");
 buttonSet.textContent="set grid size";
@@ -38,22 +40,36 @@ function resize(num) {
             square.classList.add("col"+(j+1));
             square.id= "row" + (i+1) + "_col"+(j+1);
             square.style.height=proportion+"vw";
-            
+            square.style.opacity=0;
+            square.style.background="rgb("+Math.random()*255+","+Math.random()*255+","+Math.random()*255+")";
+
             if(i===(numberRows-1)) square.classList.add("rowLast");
             if(j===(numberColumns-1)) square.classList.add("colLast"); 
 
-            row.appendChild(square); 
+            row.appendChild(square);
 
             square.addEventListener("mouseenter", function(e) {
                 console.log("mouseenter");        
-                console.log(e.target);
-                e.target.style.background="var(--herod)";
+                thisSquare = document.getElementById(e.target.id);
+                console.log("thisSquareID: "+thisSquare.id);
+                thisOpacity = parseFloat(window.getComputedStyle(thisSquare).getPropertyValue("opacity"));
+                console.log(thisOpacity);
+                if (thisSquare.style.background==="var(--hero)") {
+                thisSquare.style.opacity=0;
+                thisSquare.style.background= rgb(Math.random()*255, Math.random*255, Math.random*255);
+                } 
+                let newOpacity = thisOpacity+0.2;
+                thisSquare.style.opacity=newOpacity;
+                // let newOpacity=Number(thisOpacity)+0.1;
+                // e.target.style.background="var(--herot)";
             });
 
             square.addEventListener("mouseleave", function(e) {
+                // e.target.style.background="var(--heros)";                
                 console.log("mouseleave");
-                console.log(e.target);
-                e.target.style.background="var(--herot)";
+                thisSquare = document.getElementById(e.target.id);
+                thisOpacity = parseFloat(window.getComputedStyle(thisSquare).getPropertyValue("opacity"));
+                console.log(thisOpacity);
             });
 
         }
@@ -66,7 +82,10 @@ function clearGrid() {
     for (let i=0; i < numberRows; i++) {
         for (let j=0; j < numberColumns; j++) {
             thisSquare = document.getElementById("row"+(i+1)+"_col"+(j+1));
+            thisSquare.style.opacity=1;
             thisSquare.style.background="var(--hero)";
+            thisSquare.style.opacity=0;
+            thisSquare.style.background="var(--heroi)";
         }
     }
 };
