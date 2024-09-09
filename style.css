@@ -12,7 +12,7 @@
 * {
     margin: 0;
     padding: 0;
-    outline: 2px solid red;
+    /* outline: 2px solid red; */
 }
 
 html {
@@ -52,7 +52,6 @@ p {
 .container {
     display: block;
     gap: 0; 
-    height: same-as-width;
 }
 
 .row {
@@ -63,7 +62,6 @@ p {
 .square {
     flex: 1;
     background-color: var(--hero);
-    height: 10px;
 }
 
 .row1 {
