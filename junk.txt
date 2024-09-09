@@ -1,0 +1,40 @@
+        const testPara = document.createElement("p");
+        testPara.textContent = "AH";
+        square.appendChild(testPara);
+
+// btn7.addEventListener("click", function (e) {
+//     console.log(e);
+//     console.log(e.target);
+//     e.target.style.background = "blue";
+//   });
+
+---
+html
+<div class='square-box'>
+    <div class='square-content'>
+        <h3>test</h3>
+    </div>
+</div>
+
+css
+.square-box{
+    position: relative;
+    width: 50%;
+    overflow: hidden;
+    background: #4679BD;
+}
+.square-box:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+.square-content{
+    position:  absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    color: white;
+    text-align: center;
+}
+---

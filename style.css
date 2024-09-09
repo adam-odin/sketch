@@ -1,0 +1,68 @@
+:root {
+    --herog: #1F2937;
+    --hero: #FFFFFF;
+    --heros: #E5E7EB;
+    --herot: #88898c;
+    --herob: #00AEF0;
+    --heroc: #129bf2;
+    --herod: #f77d7a;
+    --heroi: #1F2937;
+
+    
+}
+
+html {
+    font-family: Roboto "Roboto Condensed" "Bebas Neue";
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 2px solid red;
+}
+
+body {
+    /* padding: 0 20px; */
+    /* display:flex;
+    align-content: center;
+    align-items: stretch;
+    justify-content: center; */
+}
+
+h1 {
+    text-align: center;
+    /* align-self: center; */
+    /* padding: 0 0 0 auto; */
+    /* margin: 0 0 0 auto; */
+} 
+
+p {
+    background-color: var(--heros);
+    height: 10px;
+}
+
+div {
+    background-color: var(--heros);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: auto;
+    height: auto; */
+}
+
+.row {
+    
+}
+
+.square {
+    flex 1;
+    width: 5vw;
+    height: 5vw;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: var(--hero);
+}
+
