@@ -1,29 +1,51 @@
 console.log("Test: start of script.js file linked from html");
 
+const body = document.querySelector("body");
 const container = document.querySelector(".container");
-const squares = document.querySelector(".square");
-let row;
+let column;
 let square;
 
-const gridButton = document.querySelector("#gridButton");
+const setGrid = document.querySelector(".setGrid");
+setGrid.textContent="set grid size";
+const clearGrid = document.querySelector(".clearGrid");
+clearGrid.textContent="clear grid";
+
+// setGrid.addEventListener()
+
 
 const numberRows = 16;
 const numberColumns = 16;
 
-for (let i = 0; i < numberRows; i++) {
-    console.log("Row number (i):" + i);
-    row = document.createElement("div");
-    row.classList.add("row");
-    container.appendChild(row);
-    for (let j = 0; j < numberColumns; j++) {
+for (let j = 1; j < numberColumns+1; j++) {
+    console.log("Column number (j):" + j);
+    column = document.createElement("div");
+    column.classList.add("column");
+    container.appendChild(column);
+    for (let i = 1; i < numberRows+1; i++) {
         console.log("Column number (j):" + j);
         square = document.createElement("div");
         square.classList.add("square");
+        square.classList.add("row"+i);
+        square.classList.add("col"+j);
         square.id= "row" + i + "_col"+j;
-        row.appendChild(square);
+
+        if (i===numberRows) {
+            square.classList.add("rowLast");
+        }
+        if(j===numberRows) {
+            square.classList.add("colLast");
+        }
+        column.appendChild(square); 
 
         square.addEventListener("mouseenter", function(e) {
-            console.log("mouseenter");
+            console.log("mouseenter");        
+            if(i=numberRows-1) {
+                square.classList.add("rowLast");
+            }
+            if(j=numberRows-1) {
+                square.classList.add("colLast");
+            }
+    
             console.log(e.target);
             e.target.style.background="var(--herod)";
         });
@@ -37,3 +59,9 @@ for (let i = 0; i < numberRows; i++) {
     } 
 }
 
+const squares = document.querySelector(".square");
+
+clearGrid.addEventListener("click", () => {
+    console.log("clearGrid");
+    container.style.background="var(--hero)";
+});

@@ -11,22 +11,38 @@
     
 }
 
-html {
-    font-family: Roboto "Roboto Condensed" "Bebas Neue";
-}
-
 * {
     margin: 0;
     padding: 0;
     outline: 2px solid red;
 }
 
+html {
+    font-family: Roboto "Roboto Condensed" "Bebas Neue";
+}
+
 body {
-    padding: 20px 40px; */
+    padding: 20px 40px;
     /* display:flex;
     align-content: center;
     align-items: stretch;
     justify-content: center; */
+    background-color: var(--heros);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    background-color: var(--herob);
+    color: var(--hero);
+    font-size: 18px;
+    font-weight: bold;
+    border: 6px solid var(--hero);
+    border-radius: 20px;
+    padding: 0 10px;
 }
 
 h1 {
@@ -42,18 +58,25 @@ p {
 }
 
 div {
-    background-color: var(--heros);
+    /* background-color: var(--heros); */
 }
+
+/* .shell {
+    display: flex;
+    /* align-items: center;
+    justify-content: center;
+}*/
 
 .container {
     display: flex;
+    background-color: var(--heros);
     /* align-items: center; */
     /* justify-content: center; */
-    width: 90vw;
-    height: 90vw;
-    margin: 0 5vw;
-    padding-right: 0; */
-    border: 1px solid var(--herog);
+    width: 100vw;
+    height: 100vw;
+    /*margin: 0 5vw; */
+    padding: 0 auto auto 0; 
+    /* border: 2px solid var(--herog); */
     /* width: auto;
     height: auto; */
 }
@@ -69,5 +92,21 @@ div {
     min-width: 1px;
     min-height:1px;
     background-color: var(--hero);
+    border: none;
 }
 
+.row1 {
+    border-top: 2px solid var(--herog);
+}
+
+.rowLast {
+    border-bottom: 2px solid var(--herog);
+}
+
+.col1 {
+    border-left: 2px solid var(--herog);
+}
+
+.colLast {
+    border-right: 2px solid var(--herog);
+}
